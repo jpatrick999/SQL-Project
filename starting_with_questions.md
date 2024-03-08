@@ -91,6 +91,7 @@ category_count DESC;
 
 Answer:
 
+For Most Countries Youtube,Google and Mens Tshirts were the biggest categories. In the USA Nest was also a large category
 
 ![alt text](Images/q3_answer.PNG)
 
@@ -191,7 +192,7 @@ ORDER BY
 
 
 Answer:
-Used an Online rescource in helping make the CTE
+***Used an Online rescource in helping make the CTE
 
 I took the Total Revenue From each city and divided it by the total Revenue to see how each city impacts the total Revenue. The top 4 countries account for nearly 50% of the total impact of Revenue
 
