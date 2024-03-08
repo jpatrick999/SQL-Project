@@ -86,7 +86,7 @@ category_count DESC;
 
 
 Answer:
-
+![alt text](q3_answer.png)
 
 
 
@@ -128,6 +128,7 @@ WHERE
 --used online resources in the formatting of this query 
 Answer:
 
+![alt text](q4_answer.png)
 
 
 
@@ -156,6 +157,7 @@ ORDER BY
 
 Answer:
 
+![alt text](q5_answer.png)
 
 
 
