@@ -17,7 +17,7 @@ ORDER BY
 LIMIT 3
 ```
 Answer:
-![alt text](Images/my_questions1.png)
+![alt text](Images/my_questions1.PNG)
 
 Question 2: Which citys and countries spent the most time on the site?
 
@@ -44,7 +44,7 @@ ORDER BY
 
 
 Answer:
-![alt text](Images/my_questions2.png)
+![alt text](Images/my_questions2.PNG)
 
 
 
