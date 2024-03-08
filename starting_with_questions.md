@@ -30,6 +30,9 @@ LIMIT 5
 
 Answer:
 
+
+The top 4 Cities were all in the USA being; San Francisco, Sunnyvale, Atlanta and Palo Alto. The 5th city on the list was Tel Aviv in Israel
+
 ![alt text](Images/q1_answer.PNG)
 
 
