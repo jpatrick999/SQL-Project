@@ -99,7 +99,7 @@ SQL Queries:
 
 Answer:
 
-![alt text](Image/q4_answer.PNG)
+![alt text](Images/q4_answer.PNG)
 
 
 

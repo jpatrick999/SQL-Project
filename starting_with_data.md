@@ -17,6 +17,9 @@ ORDER BY
 LIMIT 3
 ```
 Answer:
+
+
+
 ![alt text](Images/my_questions1.PNG)
 
 Question 2: Which citys and countries spent the most time on the site?
@@ -44,11 +47,14 @@ ORDER BY
 
 
 Answer:
+
+
+
 ![alt text](Images/my_questions2.PNG)
 
 
 
-Question 3: Which 3 Countries spent the least on total revenue
+Question 3: Which 5 Users spent the most on total revenue
 ```SQL
 
 SQL Queries:
@@ -68,6 +74,9 @@ LIMIT 5
 ```
 
 Answer:
+
+
+
 
 ![alt text](Images/my_questions3.PNG)
 

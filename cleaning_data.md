@@ -12,6 +12,7 @@ UPDATE analytics
 SET unit_price = unit_price / 1000000;                                                                              
 
 ---made a view for the cleaned data  
+```SQL
 
 SELECT
     CASE 
@@ -24,3 +25,4 @@ SELECT
     END AS country_cleaned
 FROM 
     all_sessions;
+    ```
