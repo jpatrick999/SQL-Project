@@ -16,7 +16,7 @@ ORDER BY
     COUNT(*) DESC
 LIMIT 3
 ```
-
+Answer:
 ![alt text](Images/my_questions1.png)
 
 Question 2: Which citys and countries spent the most time on the site?
