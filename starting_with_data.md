@@ -1,6 +1,8 @@
 Question 1: What were the top3 best selling products overall
 
 SQL Queries:
+```SQL
+
 SELECT
     v2productname AS best_selling_product,
     COUNT(*) AS product_count
@@ -13,17 +15,14 @@ GROUP BY
 ORDER BY
     COUNT(*) DESC
 LIMIT 3
+```
 
-Answer: 
-"best_selling_product"	                                "product_count"
-"Google Men's 100% Cotton Short Sleeve Hero Tee White"	     295
-"22 oz YouTube Bottle Infuser"	                             245
-"YouTube Twill Cap"	                                          221
-
+![alt text](Images/my_questions1.png)
 
 Question 2: Which citys and countries spent the most time on the site?
 
 SQL Queries:   
+```SQL
 
 SELECT
     city,
@@ -41,13 +40,16 @@ GROUP BY
     country
 ORDER BY
     total_time_onsite DESC
+```
 
 
 Answer:
-![alt text](my_questions2.png)
+![alt text](Images/my_questions2.png)
+
 
 
 Question 3: Which 3 Countries spent the least on total revenue
+```SQL
 
 SQL Queries:
 SELECT
@@ -63,13 +65,9 @@ GROUP BY
 ORDER BY
     total_revenue DESC
 LIMIT 5
+```
 
 Answer:
 
-"full_visitor_id"	"total_revenue"
-1480311877127336013	 1015480000
-3444642706013409818	 1005500000
-513403330506317388	 849700000
-751536527071005965	 747000000
-8444725132150789814	 742480000
+![alt text](Images/my_questions3.png)
 
