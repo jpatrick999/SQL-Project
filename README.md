@@ -5,11 +5,17 @@
 Some of the goals of this project would be to get a better understanding of how to use SQL in the real word where. Using SQL to derive insights from this data and help answer the questions provided. 
 
 ## Process
+
 Step1.Making the tables in Pgadmin
+
 Step2.Looked at the questions that needed to be answered to see which data i was going to be using
+
 Step3.Cleaned the relevant data that i would be using
+
 Step4. Analyze the data (write queries)
+
 Step5. Answer the quetions being asked
+
 
 
 ## Results
