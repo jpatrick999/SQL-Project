@@ -27,6 +27,8 @@ LIMIT 5
 
 
 Answer:
+The United States has the top 4 highest Total Revenue with the 4 highest cities being; San Francisco, Sunnyvale, Atlanta, Palo Alto. After that thw 5th moist total revenue is from Tel Aviv Israel.
+
 "city"	         "country"	       "total_revenue"
 "San Francisco"	 "United States"   1564320000
 "Sunnyvale"	    "United States"	   992230000
@@ -59,8 +61,9 @@ ORDER BY avg_products_ordered DESC
 
 
 Answer: 
+Spain Madrid has the most avage products ordered at 10 followed by Salem US with 8
 
-![alt text](q2_answer.png)
+![alt text](Images/q2_answer.png)
 
 
 
@@ -88,7 +91,7 @@ category_count DESC;
 Answer:
 ![alt text](q3_answer.png)
 
-
+For most countries mens t shirts and youtube were being categories. This was also true for USA but they also had more nests and google categories also.
 
 
 **Question 4: What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?**
@@ -100,7 +103,7 @@ WITH ranked_products AS (
     SELECT
         city,
         country,
-        productsku,
+        v2productname,
         COUNT(*) AS product_count,
         ROW_NUMBER() OVER (PARTITION BY city, country ORDER BY COUNT(*) DESC) AS rank
     FROM
@@ -112,18 +115,19 @@ WITH ranked_products AS (
     GROUP BY
         city,
         country,
-        productsku
+        v2productname
 )
 SELECT
     city,
     country,
-    productsku AS top_selling_product,
+    v2productname AS top_selling_product,
     product_count
 FROM
     ranked_products
 WHERE
-    rank = 1;
-
+    rank = 1
+ORDER BY
+    product_count DESC;
 
 --used online resources in the formatting of this query 
 Answer:
@@ -137,25 +141,50 @@ Answer:
 
 SQL Queries:
 
+WITH city_country_revenue AS (
+    SELECT 
+        city, 
+        country, 
+        SUM(total_transactionrevenue) AS total_revenue
+    FROM 
+        all_sessions
+    WHERE 
+        country != '(not set)'
+        AND city != '(not set)'
+        AND city != 'not available in demo dataset'
+        AND total_transactionrevenue IS NOT NULL
+    GROUP BY 
+        city, 
+        country
+),
+total_table_revenue AS (
+    SELECT 
+        SUM(total_transactionrevenue) AS total_revenue
+    FROM 
+        all_sessions
+    WHERE 
+        country != '(not set)'
+        AND city != '(not set)'
+        AND city != 'not available in demo dataset'
+        AND total_transactionrevenue IS NOT NULL
+)
 SELECT 
-    city, 
-    country, 
-    SUM(total_transactionrevenue) AS total_revenue
+    ccr.city, 
+    ccr.country, 
+    ccr.total_revenue AS city_country_revenue, 
+    ttr.total_revenue AS total_table_revenue, 
+    (ccr.total_revenue / ttr.total_revenue) * 100 AS revenue_percentage_of_total
 FROM 
-    all_sessions
-WHERE 
-    country != '(not set)'
-    AND city != '(not set)'
-    AND city != 'not available in demo dataset'
-    AND total_transactionrevenue IS NOT NULL
-GROUP BY 
-    city, 
-    country
+    city_country_revenue ccr
+CROSS JOIN 
+    total_table_revenue ttr
 ORDER BY 
-    total_revenue DESC;
-
+    ccr.total_revenue DESC;
 
 Answer:
+Used an Online rescource in helping make the CTE
+
+I took the Total Revenue From each city and divided it by the total Revenue to see how each city impacts the total Revenue. The top 4 countries account for nearly 50% of the total impact of Revenue
 
 ![alt text](q5_answer.png)
 
