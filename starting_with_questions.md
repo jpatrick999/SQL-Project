@@ -30,6 +30,7 @@ LIMIT 5
 
 Answer:
 
+![alt text](Images/q1_answer.PNG)
 
 
 
@@ -56,6 +57,7 @@ ORDER BY avg_products_ordered DESC
 
 Answer:
 
+![alt text](Images/q2_answer.PNG)
 
 
 
@@ -87,17 +89,50 @@ category_count DESC;
 Answer:
 
 
-
+![alt text](Images/q3_answer.PNG)
 
 
 **Question 4: What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?**
 
 
 SQL Queries:
+```SQL
 
+WITH ranked_products AS (
+    SELECT
+        city,
+        country,
+        v2productname AS top_selling_product,
+        COUNT(*) AS product_count,
+        ROW_NUMBER() OVER (PARTITION BY city, country ORDER BY COUNT(*) DESC) AS rank
+    FROM
+        all_sessions
+    WHERE
+        country != '(not set)'
+        AND city != '(not set)'
+        AND city != 'not available in demo dataset'
+        AND v2productname IS NOT NULL
+    GROUP BY
+        city,
+        country,
+        v2productname
+)
+SELECT
+    city,
+    country,
+    top_selling_product,
+    product_count
+FROM
+    ranked_products
+WHERE
+    rank = 1
+ORDER BY
+    country, city;
+```
 
 
 Answer:
+
 
 ![alt text](Images/q4_answer.PNG)
 
