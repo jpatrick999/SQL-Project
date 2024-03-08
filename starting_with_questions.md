@@ -60,7 +60,7 @@ ORDER BY avg_products_ordered DESC
 
 Answer: 
 
-![alt text](Q2 answer.png )
+![alt text](Q2_answer.png )
 
 
 
