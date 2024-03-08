@@ -94,7 +94,7 @@ Answer:
 For Most Countries Youtube,Google and Mens Tshirts were the biggest categories. In the USA Nest was also a large category
 
 ![alt text](Images/q3_answer.PNG)
-
+*i am unsure why this image will not display here. please refer to the image folder with the png titled "q3_answer."
 
 **Question 4: What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?**
 
