@@ -69,5 +69,5 @@ LIMIT 5
 
 Answer:
 
-![alt text](Images/my_questions3.png)
+![alt text](Images/my_questions3.PNG)
 
