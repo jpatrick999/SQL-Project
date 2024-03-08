@@ -99,7 +99,7 @@ SQL Queries:
 
 Answer:
 
-![alt text](Image/q4_answer.png)
+![alt text](Image/q4_answer.PNG)
 
 
 
@@ -157,7 +157,7 @@ Used an Online rescource in helping make the CTE
 
 I took the Total Revenue From each city and divided it by the total Revenue to see how each city impacts the total Revenue. The top 4 countries account for nearly 50% of the total impact of Revenue
 
-![alt text](Images/q5_answer.png)
+![alt text](Images/q5_answer.PNG)
 
 
 
